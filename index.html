@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table {
+      border: 3px solid black;
+      padding: 5px 5px;
+      margin: 0;
+      text-align: center;
+      margin-top: 15%;
+      margin-left: 30%;
+    }
+
+    td {
+      border: 3px solid black;
+      padding: 10px 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    button {
+      background-color: brown;
+      color: blanchedalmond;
+      padding: 5px 5px;
+      border: none;
+      border-radius: 20px;
+    }
+    button:hover {
+      background-color: antiquewhite;
+      color: brown;
+      transition: 2s;
+    }
+    .show {
+      display: none;
+    }
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  </style>
+  <body>
+    <table>
+      <tr class="tr1">
+        <td>Name</td>
+        <td><img src="./Welcome Scan.jpg" alt="" /></td>
+        <td>contact</td>
+        <td>email</td>
+        <td><button class="btn1">Hide</button></td>
+      </tr>
+      <tr class="tr2">
+        <td class="show">Name</td>
+        <td class="show"><img src="./Welcome Scan.jpg" alt="" /></td>
+        <td class="show">contact</td>
+        <td class="show">email</td>
+        <td><button class="btn2">Show</button></td>
+      </tr>
+      <tr class="tr3">
+        <td>Name</td>
+        <td><img src="./Welcome Scan.jpg" alt="" /></td>
+        <td>contact</td>
+        <td>email</td>
+        <td><button class="btn3">CSS</button></td>
+      </tr>
+      <tr class="tr4">
+        <td>Name</td>
+        <td><img src="./Welcome Scan.jpg" class="img1" /></td>
+        <td>contact</td>
+        <td>email</td>
+        <td><button class="btn4">Slideup</button></td>
+      </tr>
+      <tr class="tr5">
+        <td class="td5">Name</td>
+        <td class="td5"><img src="./Welcome Scan.jpg" alt="" /></td>
+        <td class="td5">contact</td>
+        <td class="td5">email</td>
+        <td class="tdb5"><button class="btn5">slideToggle</button></td>
+      </tr>
+    </table>
+    <script src="./jquery-3.7.1.js"></script>
+    <script>
+      $(".btn1").click(function () {
+        $(".tr1").hide(2000);
+      });
+      $(".btn2").click(function () {
+        $(".show").show(2000);
+      });
+      $(".btn3").click(function () {
+        $(".tr3").css({
+          color: "brown",
+          backgroundColor: "yellow",
+          opacity: "0.3",
+        });
+      });
+      $(".btn4").click(function () {
+        $(".tr4").slideUp(1000);
+      });
+      $(".btn5").click(function () {
+        $(".td5").slideToggle(1000);
+      });
+    </script>
+  </body>
+</html>
